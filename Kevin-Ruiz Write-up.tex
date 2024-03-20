@@ -1,0 +1,124 @@
+
+\documentclass[acmart]{acmart}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2024}
+\acmYear{2024}
+
+
+
+%%
+%% These commands are for a JOURNAL article.
+\acmMonth{3}
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Assignment 1 Write-up}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+\author{Kevin Ruiz}
+\email{k_ruiz@uncg.edu}
+\affiliation{%
+  \institution{University of North Carolina at Greensboro}
+  \streetaddress{}
+  \city{Cary}
+  \state{North Carolina}
+  \country{USA}
+  \postcode{27513}
+}
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Kevin Ruiz}
+%%
+%% Article type: Research, Review, Discussion, Invited or position
+\acmArticleType{Review}
+%%
+%% Links to code and data
+\acmCodeLink{https://github.com/borisveytsman/acmart}
+\acmDataLink{htps://zenodo.org/link}
+%%
+%% Authors' contribution
+\acmContributions{BT and GKMT designed the study; LT, VB, and AP
+  conducted the experiments, BR, HC, CP and JS analyzed the results,
+  JPK developed analytical predictions, all authors participated in
+  writing the manuscript.}
+%%
+%% Sometimes the addresses are too long to fit on the page.  In this
+%% case uncomment the lines below and fill them accodingly.
+%%
+%% \authorsaddresses{Corresponding author: Ben Trovato,
+%% \href{mailto:trovato@corporation.com}{trovato@corporation.com};
+%% Institute for Clarity in Documentation, P.O. Box 1212, Dublin,
+%% Ohio, USA, 43017-6221}
+%%
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Bayesian Network, Inference, Python, Propositional Logic, Ontology}
+
+\maketitle
+
+\section{Problem statement}
+
+Assignment 1 for course CSC 429, Artifical Intelligence, Spring 2024, Tasked with three main objectives, Ontology Manipulation and Representation using Human Disease Ontology, Propositional Logic, and Bayesian Network Creation and Inference
+
+\section{Methods}
+
+Using Python 3 and multiple libraries such as owlready2, sympy, pgmpy to complete this assignment. As well as applying techniques learned in class reading documentation available and experimenting throughout the time alloted for the completion of the assignment.
+
+	Question one was forged to understand the structure of an ontology, using owlready2 I had a number of tasks concisting of  the metadata to retrieve comment, count the number of classes/subclasses and compute the average number of child per class as well as searching the ontology for a specific id (DOID:9351) and the label ("type 2 diabetes mellitus") and the goal was to output all of its ancesteors. Also my favorite part about this question was creating an ontology with three classes (DM, T1DM and T2DM) I also defined the relationships between these classes, and added the instance of " insulin-dependent diabetes mellitusn to T1DM class, I then saved the file in RDFXML format and that was question one done!
+	Question two in my opinion was very straight forward specially when using the library sympy tasked with creating logical expression involving propositions like A and B our calculations included (1) not A, (2) A or B, (3) A and B, (4) A implies B, (5) B implies A, and (6) a Bioconditional check of A, B task two was to manipulate a given expression to turn it into CNF and DNF using the library
+	Question three was by far the most challenging and time consuming, I really struggled to find online resources to help me and the documentation was a real pain to read. At time I really felt like I was not going to be able to complete this, however through many attempts and headaches I finally had code that compiled. I really struggled when declaring the Bayesian network, the references I could find were outdated to the current version of pgympy, I did want to make the switch to pomegranate however the code was even more confusing, I kept marching forward and after a lot of expirementation and debugging i was sucessful. After finally constructing the Network, Visualization was a piece of cake, and I had a hiccup with Inferences, because again I started using a depricated version of doing it, once I figured it out it went smoothly. 
+
+	
+
+\section{Results}
+
+After completing this Assignment I realized that python has a lot of powerful libraries to ease the task of implementing techniques that we discussed in class. I also started to understand Ontologies more for example the HDO shows a structure that has a lot of hirarchy, and I realized that metadata comments provide a good explanation about the ontology. I also learned that it is very easy to create and define your own ontologies using owlready2. I observed that manipulating basic propositional logic is very easy with sympy, by just declaring the initial state of the proposition you can create many expression very quickly specially something as complex as turning expression into CNF and DNF that was really impressive. One thing that was not straight forward at the start was the Bayesian Network construction, once that was in place though everything that came after that was pretty simple in hindsight 
+
+
+\section{Significance}
+
+I think that putting the concepts we learned in class into practice is a great way of learning, this Assignment does give you a taste to the power that python has, given the correct library. I also became a lot more familiar with Bayesian networks because of this, I am much more confident in my ability to discuss the topic. 
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-acmcp.tex'.
